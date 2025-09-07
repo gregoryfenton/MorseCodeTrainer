@@ -123,3 +123,15 @@ To protect the LEDs, you must use a resistor. A standard red LED has a forward v
 | **Down Button** | Button | 10 | Connect one terminal to **GPIO10**. Connect the other to **GND**. |
 | **Left Button** | Button | 14 | Connect one terminal to **GPIO14**. Connect the other to **GND**. |
 | **Right Button** | Button | 18 | Connect one terminal to **GPIO18**. Connect the other to **GND**. |
+
+### Ebook and Practice Files
+ 
+The application uses a specific naming convention to determine how to handle practice text. Files should be saved in the `texts` directory under the appropriate subfolder.
+ 
+* **Ebook File Format:** `book title|author|ebook.txt`
+* **Purpose:** The app will select a **random passage or paragraph** from this file for each training session. This is ideal for long-form texts.
+* **Example:** `Moby Dick|Herman Melville|ebook.txt`
+ 
+* **Practice File Format:** `information|author|practice.txt`
+* **Purpose:** The entire content of this file will be used as a **single, continuous block of practice text**. This is best for shorter, targeted practice.
+* **Example:** `Common Words|G3NMD|practice.txt`
