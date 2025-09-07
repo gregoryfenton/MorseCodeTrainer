@@ -61,44 +61,55 @@ To protect the LEDs, you must use a resistor. A standard red LED has a forward v
 
 * For 5V Power Pin: A standard **150Ω** or **220Ω** resistor is suitable.
 
-#### ASCII Wiring Diagram
-
-+---------------+
-| Raspberry Pi  |
-|  GPIO Header  |
-+---------------+
-| [1] 3.3V ---+--------[Resistor]-----> Buzzer (+)
-| [2] 5V      |
-| [3] GPIO2 --+----+--------------> Dit Paddle
-| [4] 5V      |    |
-| [5] GPIO3 --+----+--------------> Dah Paddle
-| [6] GND ----+----+----------------> All Grounds
-| [7] GPIO4 ----+--------------> Straight Key
-| [8] GPIO14---+-----------------> Up Button
-| [9] GND -----+
-| [10] GPIO15---+-----------------> Down Button
-| [11] GPIO17---+-----------------> Left Button
-| [12] GPIO18---+-----------------> Right Button
-| [13] GPIO27---+-----------------> OK Button
-| [14] GND -----+
-| [15] GPIO22---+-----------------> Cancel Button
-| [16] GPIO23--+-[Resistor]->[+]--+---> Dit LED (-)
-| [17] 3.3V    |
-| [18] GPIO24--+-[Resistor]->[+]--+---> Dah LED (-)
-| [19] GPIO10  |
-| [20] GND ----+
-| [21] GPIO9   |
-| [22] GPIO25--+-[Resistor]->[+]--+---> Tick LED (-)
-| [23] GPIO11  |
-| [24] GPIO8   |
-| [25] GND     |
-| [26] GPIO7   |
-+--------------+
-
+#### ASCII Wiring Diagram  
+##### Raspberry Pi GPIO Header
+| Source | Resistor | Device | Return | Ground Pin |
+| ----- | ----- | ----- | ----- | ----- |
+| (3.3V) Pin 1 | 100Ω | Buzzer (+) | Buzzer (-) | (GND) Pin 6 |
+| (5V) Pin 2 | - | - | - | - |
+| (GPIO2) Pin 3 | | Dit Paddle (-) | Dit Paddle (+) | (GND) Pin 6 |
+| (5V) Pin 4 | - | - | - | - |
+| (GPIO3) Pin 5 | | Dah Paddle (-) | Dah Paddle (+) | (GND) Pin 6 |
+| (GND) Pin 6 | - | All Ground Connections | - | - |
+| (GPIO4) Pin 7 | | Straight Key (-) | Straight Key (+) | (GND) Pin 6 |
+| (GPIO14) Pin 8 | | Up Button (-) | Up Button (+) | (GND) Pin 6 |
+| (GND) Pin 9 | - | - | - | - |
+| (GPIO15) Pin 10 | | Down Button (-) | Down Button (+) | (GND) Pin 6 |
+| (GPIO17) Pin 11 | | Left Button (-) | Left Button (+) | (GND) Pin 6 |
+| (GPIO18) Pin 12 | | Right Button (-) | Right Button (+) | (GND) Pin 6 |
+| (GPIO27) Pin 13 | | OK Button (-) | OK Button (+) | (GND) Pin 6 |
+| (GND) Pin 14 | - | - | - | - |
+| (GPIO22) Pin 15 | | Cancel Button (-) | Cancel Button (+) | (GND) Pin 6 |
+| (GPIO23) Pin 16 | 100Ω | Dit LED (+) | Dit LED (-) | (GND) Pin 6 |
+| (3.3V) Pin 17 | - | - | - | - |
+| (GPIO24) Pin 18 | 100Ω | Dah LED (+) | Dah LED (-) | (GND) Pin 6 |
+| (GPIO10) Pin 19 | - | - | - | - |
+| (GND) Pin 20 | - | - | - | - |
+| (GPIO9) Pin 21 | - | - | - | - |
+| (GPIO25) Pin 22 | 100Ω | Tick LED (+) | Tick LED (-) | (GND) Pin 6 |
+| (GPIO11) Pin 23 | - | - | - | - |
+| (GPIO8) Pin 24 | - | - | - | - |
+| (GND) Pin 25 | - | - | - | - |
+| (GPIO7) Pin 26 | - | - | - | - |
+| (GND) Pin 27 | - | - | - | - |
+| (GPIO1) Pin 28 | - | - | - | - |
+| (GPIO5) Pin 29 | - | - | - | - |
+| (GND) Pin 30 | - | - | - | - |
+| (GPIO6) Pin 31 | - | - | - | - |
+| (GPIO12) Pin 32 | - | - | - | - |
+| (GND) Pin 33 | - | - | - | - |
+| (GPIO13) Pin 34 | - | - | - | - |
+| (GPIO19) Pin 35 | - | - | - | - |
+| (GND) Pin 36 | - | - | - | - |
+| (GPIO16) Pin 37 | - | - | - | - |
+| (GPIO26) Pin 38 | - | - | - | - |
+| (GND) Pin 39 | - | - | - | - |
+| (GPIO20) Pin 40 | - | - | - | - |
 
 #### Device Pinout
 
 | **Device** | **Type** | **Default BCM Pin** | **Wiring** |
+| :--- | :--- | :--- | :--- |
 | **Buzzer** | Piezo | 12 | Connect positive terminal to **GPIO12**. Connect negative terminal to **GND**. |
 | **Dit LED** | LED | 23 | Connect anode (long leg) to **GPIO23** through a **100Ω** resistor. Connect cathode (short leg) to **GND**. |
 | **Dah LED** | LED | 24 | Connect anode (long leg) to **GPIO24** through a **100Ω** resistor. Connect cathode (short leg) to **GND**. |
